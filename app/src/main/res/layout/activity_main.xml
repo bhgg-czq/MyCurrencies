@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:orientation="vertical">
+        <TextView
+            android:text="Foregin Currency"
+            style="@style/label.curr" />
+        <Spinner
+            android:id="@+id/spn_for"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="55"
+            android:gravity="top"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+        <TextView
+            android:text="Enter foregin currency amount here:"
+            style="@style/label.desc" />
+    </LinearLayout>
+    <LinearLayout style="@style/layout_back">
+        <EditText
+            android:id="@+id/edt_amount"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="#111"
+            android:digits="0123456789."
+            android:gravity="center_vertical"
+            android:inputType="numberDecimal"
+            android:textColor="#FFF"
+            android:textSize="30sp">
+            <requestFocus/>
+        </EditText>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_calc"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/Calculate"
+        android:textColor="@color/white"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20">
+        <TextView
+            android:text="Home Currency"
+            style="@style/label.curr" />
+        <Spinner
+            android:id="@+id/spn_hom"
+            android:gravity="top"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="55"/>
+        <TextView
+            android:text="Calculated result in home currency:"
+            style="@style/label.desc" />
+    </LinearLayout>
+    <LinearLayout style="@style/layout_back">
+        <TextView
+            android:id="@+id/txt_converted"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:background="#333"
+            android:gravity="center_vertical"
+            android:textSize="30sp"
+            android:typeface="normal"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+
+</LinearLayout>
